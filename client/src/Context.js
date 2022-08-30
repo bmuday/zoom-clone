@@ -10,9 +10,9 @@ const socket = io("http://localhost:5000");
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
   const [callEnded, setCallEnded] = useState(false);
-  const [stream, setStream] = useState();
+  const [stream, setStream] = useState(null);
   const [name, setName] = useState("");
-  const [call, setCall] = useState({});
+  const [call, setCall] = useState(null);
   const [me, setMe] = useState("");
 
   const myVideo = useRef();
